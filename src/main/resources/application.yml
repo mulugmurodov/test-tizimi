@@ -1,0 +1,16 @@
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:oracle:thin:@217.30.161.61:1521:prod
+    username: srt_pay
+    password: srt_pay
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+server:
+  port: 8060
