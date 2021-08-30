@@ -5,7 +5,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import uz.srt.srtpaybackend.enteties.User;
+import uz.srt.srtpaybackend.enteties.auth.User;
 import uz.srt.srtpaybackend.repositories.UserRepository;
 import uz.srt.srtpaybackend.utils.MyUserPrincipal;
 

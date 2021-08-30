@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import uz.srt.srtpaybackend.enteties.User;
+import uz.srt.srtpaybackend.enteties.auth.User;
 import uz.srt.srtpaybackend.repositories.UserRepository;
 
 @SpringBootApplication
@@ -20,8 +20,8 @@ public class SrtPayBackendApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        if (userRepository.count() > 0){
+    public void run(String... args) {
+        if (userRepository.count() > 0) {
             return;
         }
         User user = new User();

@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import uz.srt.srtpaybackend.enteties.User;
+import uz.srt.srtpaybackend.enteties.auth.User;
 
 import java.util.Collection;
 import java.util.Collections;
