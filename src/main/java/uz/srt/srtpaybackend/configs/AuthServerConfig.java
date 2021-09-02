@@ -25,7 +25,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
                 .withClient("client").secret(passwordEncoder.encode("12345"))
                 .authorizedGrantTypes("password", "authorization_code", "refresh_token")
                 .resourceIds("oauth2-resource")
-                .accessTokenValiditySeconds(300)
+                .accessTokenValiditySeconds(3000)
                 .refreshTokenValiditySeconds(240000);
     }
 
