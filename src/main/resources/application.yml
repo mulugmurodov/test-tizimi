@@ -1,17 +1,17 @@
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:oracle:thin:@217.30.161.61:1521:prod
-    username: srt_pay
-    password: srt_pay
+    url: jdbc:postgresql://localhost:5432/testing
+    username: test
+    password: test
     hikari:
       poolName: Hikari
       auto-commit: false
   jpa:
     hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
       ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 server:
-  port: 9060
+  port: 9080

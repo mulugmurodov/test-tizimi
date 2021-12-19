@@ -12,9 +12,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "auth_user", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"user_name"})
-})
+@Table(name = "auth_user")
 @Data
 public class User {
     @Id
@@ -22,25 +20,24 @@ public class User {
     @Column(unique = true, nullable = false)
     private Long id;
 
-    @Column(name = "user_name", unique = true, nullable = false, columnDefinition = "varchar2(255)")
+    @Column(name = "user_name", unique = true, nullable = false)
     private String username;
 
-    @Column(unique = true, nullable = false, columnDefinition = "varchar2(255)")
+    @Column(unique = true, nullable = false)
     private String password;
 
     @CreatedDate
     @CreationTimestamp
-    @Column(name = "created_at", columnDefinition = "DATE default SYSDATE", nullable = false)
+    @Column(name = "created_at", nullable = false)
     @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime createdAt;
 
     @LastModifiedDate
     @UpdateTimestamp
-    @Column(name = "updated_at", columnDefinition = "DATE")
+    @Column(name = "updated_at")
     @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime updatedAt;
 
-    @Column(name = "is_deleted", columnDefinition = "NUMBER default 0")
-    @Type(type = "org.hibernate.type.NumericBooleanType")
+    @Column(name = "is_deleted")
     private Boolean deleted = false;
 }

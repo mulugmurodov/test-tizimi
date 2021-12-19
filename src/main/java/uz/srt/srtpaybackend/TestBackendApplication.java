@@ -10,13 +10,13 @@ import uz.srt.srtpaybackend.repositories.UserRepository;
 
 @SpringBootApplication
 @RequiredArgsConstructor
-public class SrtPayBackendApplication implements CommandLineRunner {
+public class TestBackendApplication implements CommandLineRunner {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
     public static void main(String[] args) {
-        SpringApplication.run(SrtPayBackendApplication.class, args);
+        SpringApplication.run(TestBackendApplication.class, args);
     }
 
     @Override
