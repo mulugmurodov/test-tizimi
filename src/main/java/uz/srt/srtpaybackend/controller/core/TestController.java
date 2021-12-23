@@ -21,22 +21,22 @@ public class TestController {
         return ResponseEntity.ok(testService.getPage(pageable));
     }
 
-    @GetMapping("/test-theme/{id}")
+    @GetMapping("/test/{id}")
     public ResponseEntity<?> getOne(@PathVariable Long id){
         return ResponseEntity.ok(testService.getOne(id));
     }
 
-    @PostMapping("/test-theme")
+    @PostMapping("/test")
     public ResponseEntity<?> create(@RequestBody Test test){
         return ResponseEntity.ok(testService.create(test));
     }
 
-    @PutMapping("/test-theme/{id}")
+    @PutMapping("/test/{id}")
     public ResponseEntity<?> update(@PathVariable Long id, @RequestBody Test test){
         return ResponseEntity.ok(testService.update(id, test));
     }
 
-    @DeleteMapping("/test-theme/{id}")
+    @DeleteMapping("/test/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         return ResponseEntity.ok(testService.delete(id));
     }
