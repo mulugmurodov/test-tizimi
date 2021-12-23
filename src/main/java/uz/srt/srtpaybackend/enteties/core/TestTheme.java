@@ -26,7 +26,7 @@ public class TestTheme {
     private String name;
     private String description;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     private User createdUser;
 
     @ManyToOne

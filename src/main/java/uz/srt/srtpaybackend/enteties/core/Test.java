@@ -29,7 +29,7 @@ public class Test {
     private String questionText;
     private String description;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     private User createdUser;
 
     @ManyToOne

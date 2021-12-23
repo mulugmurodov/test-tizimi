@@ -30,7 +30,7 @@ public class TestAnswer {
     private String description;
     private Boolean isTrue;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     private User createdUser;
 
     @ManyToOne

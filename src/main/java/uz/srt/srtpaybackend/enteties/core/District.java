@@ -27,7 +27,7 @@ public class District {
     @ManyToOne(optional = false)
     private Region region;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     private User createdUser;
 
     @ManyToOne

@@ -24,7 +24,7 @@ public class Region {
 
     private String name;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
     private User createdUser;
 
     @ManyToOne
