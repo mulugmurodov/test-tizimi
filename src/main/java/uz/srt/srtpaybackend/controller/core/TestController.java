@@ -14,7 +14,7 @@ import uz.srt.srtpaybackend.service.core.TestThemeService;
 @RequestMapping("api")
 @RequiredArgsConstructor
 public class TestController {
-    public TestService testService;
+    public final TestService testService;
 
     @GetMapping("/test")
     public ResponseEntity<?> getPage(Pageable pageable){
