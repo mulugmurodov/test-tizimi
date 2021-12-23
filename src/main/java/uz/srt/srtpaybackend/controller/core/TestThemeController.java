@@ -35,7 +35,7 @@ public class TestThemeController {
     }
 
     @DeleteMapping("/test-theme/{id}")
-    public ResponseEntity<?> update(@PathVariable Long id){
+    public ResponseEntity<?> delete(@PathVariable Long id){
         return ResponseEntity.ok(testThemeService.delete(id));
     }
 }
