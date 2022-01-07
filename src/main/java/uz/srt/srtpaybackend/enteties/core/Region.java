@@ -30,7 +30,7 @@ public class Region {
     @ManyToOne
     private User updatedUser;
 
-    private Instant createdDate;
+    private Instant createdDate = Instant.now();
 
     private Instant updatedDate;
 
