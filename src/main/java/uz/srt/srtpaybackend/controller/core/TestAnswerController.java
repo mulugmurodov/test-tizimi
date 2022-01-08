@@ -16,27 +16,27 @@ import uz.srt.srtpaybackend.service.core.TestService;
 public class TestAnswerController {
     public final TestAnswerService testAnswerService;
 
-    @GetMapping("/test")
+    @GetMapping("/test-answer")
     public ResponseEntity<?> getPage(Pageable pageable){
         return ResponseEntity.ok(testAnswerService.getPage(pageable));
     }
 
-    @GetMapping("/test/{id}")
+    @GetMapping("/test-answer/{id}")
     public ResponseEntity<?> getOne(@PathVariable Long id){
         return ResponseEntity.ok(testAnswerService.getOne(id));
     }
 
-    @PostMapping("/test")
+    @PostMapping("/test-answer")
     public ResponseEntity<?> create(@RequestBody TestAnswer testAnswer){
         return ResponseEntity.ok(testAnswerService.create(testAnswer));
     }
 
-    @PutMapping("/test/{id}")
+    @PutMapping("/test-answer/{id}")
     public ResponseEntity<?> update(@PathVariable Long id, @RequestBody TestAnswer testAnswer){
         return ResponseEntity.ok(testAnswerService.update(id, testAnswer));
     }
 
-    @DeleteMapping("/test/{id}")
+    @DeleteMapping("/test-answer/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         return ResponseEntity.ok(testAnswerService.delete(id));
     }
