@@ -25,9 +25,7 @@ public class TestAnswer {
     @ManyToOne(optional = false)
     private Test test;
 
-    private String name;
-    private String questionText;
-    private String description;
+    private String answerText;
     @Column(nullable = false, columnDefinition = "default false")
     private Boolean isTrue;
 
