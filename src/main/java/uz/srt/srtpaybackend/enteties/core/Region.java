@@ -46,4 +46,9 @@ public class Region {
     public int hashCode() {
         return getClass().hashCode();
     }
+
+    public Region id(Long regionId) {
+        this.id = regionId;
+        return this;
+    }
 }

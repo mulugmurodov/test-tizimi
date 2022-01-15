@@ -6,6 +6,9 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import uz.srt.srtpaybackend.dto.UserDTO;
+import uz.srt.srtpaybackend.enteties.core.District;
+import uz.srt.srtpaybackend.enteties.core.Region;
 import uz.srt.srtpaybackend.utils.LocalDateTimeConverter;
 
 import javax.persistence.*;
@@ -40,4 +43,32 @@ public class User {
 
     @Column(name = "is_deleted")
     private Boolean deleted = false;
+
+    private String firstName;
+    private String lastName;
+    private String middleName;
+
+    @OneToOne
+    @JoinColumn(name = "region_id")
+    private Region region;
+
+    @OneToOne
+    @JoinColumn(name = "district_id")
+    private District district;
+
+    public UserDTO toDTO(){
+        UserDTO dto = new UserDTO();
+        dto.setId(this.id);
+        dto.setId(this.id);
+        dto.setUsername(this.username);
+        dto.setCreatedAt(this.createdAt);
+        dto.setUpdatedAt(this.updatedAt);
+        dto.setDeleted(this.deleted);
+        dto.setFirstName(this.firstName);
+        dto.setLastName(this.lastName);
+        dto.setMiddleName(this.middleName);
+        dto.setRegionId(this.region.getId());
+        dto.setDistrictId(this.district.getId());
+        return dto;
+    }
 }

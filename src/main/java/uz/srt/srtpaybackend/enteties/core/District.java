@@ -49,4 +49,9 @@ public class District {
     public int hashCode() {
         return getClass().hashCode();
     }
+
+    public District id(Long districtId) {
+        this.id = districtId;
+        return this;
+    }
 }
