@@ -19,8 +19,8 @@ public class DistrictController {
         return ResponseEntity.ok(districtService.getPage(pageable));
     }
 
-    @GetMapping("/district/by-region/regionId")
-    public ResponseEntity<?> getPageRegionId(Long regionId, Pageable pageable){
+    @GetMapping("/district/by-region/{regionId}")
+    public ResponseEntity<?> getPageRegionId(@PathVariable Long regionId, Pageable pageable){
         return ResponseEntity.ok(districtService.getPageByRegionId(regionId, pageable));
     }
 
