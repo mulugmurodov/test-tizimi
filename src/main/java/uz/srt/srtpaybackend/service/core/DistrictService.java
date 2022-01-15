@@ -32,4 +32,8 @@ public class DistrictService {
         districtRepository.deleteById(id);
         return true;
     }
+
+    public Page<District> getPageByRegionId(Long regionId, Pageable pageable) {
+        return districtRepository.findAllByRegionId(regionId, pageable);
+    }
 }

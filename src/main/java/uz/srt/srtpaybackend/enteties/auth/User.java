@@ -13,6 +13,7 @@ import uz.srt.srtpaybackend.utils.LocalDateTimeConverter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Entity
 @Table(name = "auth_user")
@@ -45,7 +46,9 @@ public class User {
     private Boolean deleted = false;
 
     private String firstName;
+
     private String lastName;
+
     private String middleName;
 
     @OneToOne
@@ -67,8 +70,10 @@ public class User {
         dto.setFirstName(this.firstName);
         dto.setLastName(this.lastName);
         dto.setMiddleName(this.middleName);
-        dto.setRegionId(this.region.getId());
-        dto.setDistrictId(this.district.getId());
+        dto.setRegionId(Objects.nonNull(this.region) ? this.region.getId() : null);
+        dto.setDistrictId(Objects.nonNull(this.district) ? this.district.getId() : null);
+        dto.setRegionName(Objects.nonNull(this.region) ? this.region.getName() : null);
+        dto.setDistrictName(Objects.nonNull(this.district) ? this.district.getName() : null);
         return dto;
     }
 }

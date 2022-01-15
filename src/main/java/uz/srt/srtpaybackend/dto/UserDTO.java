@@ -20,7 +20,9 @@ public class UserDTO {
     private String lastName;
     private String middleName;
     private Long regionId;
+    private String regionName;
     private Long districtId;
+    private String districtName;
 
     public User toEntity() {
         User user = new User();
