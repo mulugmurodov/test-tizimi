@@ -37,6 +37,6 @@ public class UserDTO {
         user.setMiddleName(this.middleName);
         user.setRegion(new Region().id(this.regionId));
         user.setDistrict(new District().id(this.districtId));
-        return new User();
+        return user;
     }
 }
