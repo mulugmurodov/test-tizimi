@@ -50,6 +50,7 @@ public class User {
     private String lastName;
 
     private String middleName;
+    private String phoneNumber;
 
     @OneToOne
     @JoinColumn(name = "region_id")
@@ -70,6 +71,7 @@ public class User {
         dto.setFirstName(this.firstName);
         dto.setLastName(this.lastName);
         dto.setMiddleName(this.middleName);
+        dto.setPhoneNumber(this.phoneNumber);
         dto.setRegionId(Objects.nonNull(this.region) ? this.region.getId() : null);
         dto.setDistrictId(Objects.nonNull(this.district) ? this.district.getId() : null);
         dto.setRegionName(Objects.nonNull(this.region) ? this.region.getName() : null);

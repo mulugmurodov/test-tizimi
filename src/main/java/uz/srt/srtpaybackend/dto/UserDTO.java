@@ -19,6 +19,7 @@ public class UserDTO {
     private String firstName;
     private String lastName;
     private String middleName;
+    private String phoneNumber;
     private Long regionId;
     private String regionName;
     private Long districtId;
@@ -35,6 +36,7 @@ public class UserDTO {
         user.setFirstName(this.firstName);
         user.setLastName(this.lastName);
         user.setMiddleName(this.middleName);
+        user.setPhoneNumber(this.phoneNumber);
         user.setRegion(new Region().id(this.regionId));
         user.setDistrict(new District().id(this.districtId));
         return user;
