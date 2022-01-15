@@ -31,6 +31,9 @@ public class UserService {
         if (Objects.isNull(user.getCreatedAt())) {
             user.setCreatedAt(LocalDateTime.now());
         }
+        if (Objects.isNull(user.getDeleted())) {
+            user.setDeleted(false);
+        }
         userRepository.save(user);
         return user.toDTO();
     }
